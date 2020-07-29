@@ -1,0 +1,73 @@
+#include<iostream>
+using namespace std;
+
+struct node{
+    int data;
+    struct node*next;
+}*first=NULL;
+
+
+
+void create(struct node*p,int n){
+    struct node *temp,*last;
+    first=new node;
+    first->data=A[0];
+    first->data=NULL;
+    last=first;
+
+    for(i=0;i<n;i++){
+    temp=new node;
+    temp->data=A[i];
+    temp->last=NULL;
+    last=temp;
+    }
+}
+void display(strcut node*p){
+    node* p=first;
+    while(p!=NULL){
+        cout<<"linked list is"<<p->data;
+        p=p->next;
+
+    }
+    return 0;
+}
+
+void sortedinsert(struct node *p,int x ){
+    struct node *t,*q=NULL;
+    t=new node;
+    t->data=x;
+    t->next=NULL;
+
+    if(first=NULL){
+    first=t;
+    }
+    else{
+
+        while(p!=NULL && p->data < x){
+            q=p;
+            p=p->next;
+        }
+        if(p==first){
+            t->next=first;
+            first=t;
+
+        }
+    
+    else{
+        t->next=q->next;
+        q->next=t;
+    }
+
+    }
+
+
+}
+ int main(){
+     int A[]=(3,7,19,10);
+     create(A,4);
+      sortedinsert(first,14);
+
+     display(first);
+
+     return 0;
+ }

@@ -20,6 +20,14 @@ void create(int A[],int n){
     last=t;
   }
 }
+void display(struct node*p){
+  node* p=head;
+  while(P!=NULL){
+    cout<<"display linked list:<<p->data;
+    p=p->next;
+  }
+  return 0;
+}
 
 void max(struct node *p){
   int max = p->data;
@@ -35,5 +43,6 @@ void max(struct node *p){
 int main(){
   int A[]={11,2,8,3,25};
   create(A,5);
+  display(first)
   max(first);
 }
