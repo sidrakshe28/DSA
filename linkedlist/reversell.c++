@@ -34,13 +34,13 @@ void display(struct node*p){
 
 void reverse(struct node *p){
     int *A,i=0;
-    struct node *q;
+    struct node *q=p;
     A=new node;
     while(q!=NULL)
     {
         A[i]=q->data;
         q=q->next;
-        i++
+        i++;
     }
     q=p;
     i--;
