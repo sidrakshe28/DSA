@@ -5,7 +5,7 @@ struct node{
     struct node  *next;
 }*head;
 
- void create(int a[],int n){
+ void create(int A[],int n){
      int i ;
      struct node *temp,*last;
      head=new node;
