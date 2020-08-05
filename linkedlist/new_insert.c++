@@ -29,9 +29,18 @@ void display(strcut node*p){
     }
     return 0;
 }
+void count (strcut *node p){
+     int c=0;
+     while(p!=null){
+         c++;
+         p=p->data;
+     }
+     return c;
+}
 
 void insert(struct node *p,int index,int x){
     struct node *t;
+    int i;
  if(index <0 || index >count(P))
   return ;
   t=new node;
@@ -45,7 +54,7 @@ void insert(struct node *p,int index,int x){
 else
 {
     for(i=0;i<index;i++)
-    p=p-next;
+    p=p->next;
     t->next=p->next;
     p->next=t;
 }
@@ -53,7 +62,7 @@ else
 
 }
 int main(){
-    int A[]={3,9.17,3};
+    int A[]={3,9,17,3};
     create(A,4);
     insert(first,2,5)
     display(first);
