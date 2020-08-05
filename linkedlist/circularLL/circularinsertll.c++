@@ -45,7 +45,7 @@ int lenth(struct node*p){
 void insert(Struct node *p,int index,int x){
     struct node *t;
     int i;
-    if(index<0 || index >length(P))
+    if(index  < 0 || index >length(P))
     return;
 
     if(index==0){
@@ -55,7 +55,7 @@ void insert(Struct node *p,int index,int x){
             head=t;
             head->next=head;
         }
-        esle{
+        else{
             while(p->next!=head)
             p=p->next;
             t->next=head;
@@ -74,5 +74,6 @@ else{
 int main(){
     int A[]={1,4,5,7};
     create(A,4);
+    insert(head,2,10);
     display(head);
 }
