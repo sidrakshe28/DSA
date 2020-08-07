@@ -33,7 +33,7 @@ void count (strcut *node p){
      int c=0;
      while(p!=null){
          c++;
-         p=p->data;
+         p=p->next;
      }
      return c;
 }
@@ -53,7 +53,7 @@ void insert(struct node *p,int index,int x){
 
 else
 {
-    for(i=0;i<index;i++)
+    for(i=0;i<index-1;i++)
     p=p->next;
     t->next=p->next;
     p->next=t;
