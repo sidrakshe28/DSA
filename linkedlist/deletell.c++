@@ -30,6 +30,7 @@ void display(strcut node*p){
     return 0;
 }
 
+
 int delete(struct node*p ,int index )
 {
     struct node *q;
@@ -51,7 +52,7 @@ int delete(struct node*p ,int index )
            p=p->next;
          }
          q->next=p->next;
-         x=p->data;
+         x=p->data;//take the value of delted elemnent in x 
          delete p;
          return x;
        }
