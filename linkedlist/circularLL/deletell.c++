@@ -22,18 +22,39 @@ void create(struct node *p,int n){
     }
 }
 
-void display (struct node*p){
+void display (struct node*h){
      do{
-         cout<<"print data"<<p->data;
-         p=p->next;
+         cout<<"print data"<<-h>data;
+         h=h->next;
      }
-     while(p!=head);
+     while(h!=head);
 
      cout<<"\n";
  }
 
+void insert(struct node *p,int index,int x){
+    int i;
+    if(index < 0 || index <count(p))
+    return ;
+    t=new node;
+        t->data=x;
+    if(index==0){
+        t->next=first;
+        first=t;
+
+    }
+    else{
+        for(i=0;i<index-1;i++){
+            p=p->next;
+            t->next=p->next;
+            p->next=t;
+            
+        }
+    }
+}
 int main(){
     int A[]={2,3,8,9};
     create(A,4);
     display(head);
+    insert()
 }

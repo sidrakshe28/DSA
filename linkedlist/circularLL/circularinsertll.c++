@@ -67,7 +67,8 @@ void insert(Struct node *p,int index,int x){
 else{
     for(i=o;i<index-1;i++){
         t=new node;
-        t->data=p->next;
+        t->data=x;
+        t->next=p->next;
         p->next=t;
     }
 }
