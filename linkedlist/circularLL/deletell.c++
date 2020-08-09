@@ -32,26 +32,8 @@ void display (struct node*h){
      cout<<"\n";
  }
 
-void insert(struct node *p,int index,int x){
-    int i;
-    if(index < 0 || index <count(p))
-    return ;
-    t=new node;
-        t->data=x;
-    if(index==0){
-        t->next=first;
-        first=t;
 
-    }
-    else{
-        for(i=0;i<index-1;i++){
-            p=p->next;
-            t->next=p->next;
-            p->next=t;
-            
-        }
-    }
-}
+void delete()
 int main(){
     int A[]={2,3,8,9};
     create(A,4);
