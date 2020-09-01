@@ -1,6 +1,6 @@
 //baisc stack operations
 
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 #define max 10000;
 
