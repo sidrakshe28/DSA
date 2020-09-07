@@ -17,8 +17,9 @@ struct Queue{
     void queueEnqueue(int data){
         if(capacity == rear)
         {
-      cout<<"\n Queue is full\n";
-       return;
+         cout<<"\n Queue is full\n";
+         return;
+
         }
 
         else{
@@ -29,6 +30,7 @@ struct Queue{
     }
 
    void queueDequeue(){
+
        if(front==rear){
      cout<<"\n queue is empty\n";
      return;
@@ -50,6 +52,7 @@ struct Queue{
            cout<<"\nqueue is empty\n";
            return;
        }
+       
        for(i=front;i < rear;i++){
            cout<<queue[i];
        }
