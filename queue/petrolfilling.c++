@@ -7,7 +7,7 @@ int gettour(int petrol[], int distance[], int m){
         sum=sum+petrol[i]-distance[i];
       if(sum <0){
           start=i+1;
-          diff=sum;
+          diff=diff +sum;
           sum=0;
       }
 
