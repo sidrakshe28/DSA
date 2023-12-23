@@ -1,17 +1,17 @@
 class Solution {
 public:
     bool isPathCrossing(string path) {
-        pair<int, int> curr_coor({0,0});
+        pair<int, int> curr_coordinate({0,0});
         set<pair<int,int>> st;
-        st.insert(curr_coor);
+        st.insert(curr_coordinate);
         for (auto &dir: path)
         {
-            if(dir=='N') curr_coor.second+=1;
-            if(dir=='S') curr_coor.second-=1;
-            if(dir=='E') curr_coor.first+=1;
-            if(dir=='W') curr_coor.first-=1;
-            if(st.find(curr_coor)!=st.end()) return(true);
-            st.insert(curr_coor);
+            if(dir=='N') curr_coordinate.second+=1;
+            if(dir=='S') curr_coordinate.second-=1;
+            if(dir=='E') curr_coordinate.first+=1;
+            if(dir=='W') curr_coordinate.first-=1;
+            if(st.find(curr_coordinate)!=st.end()) return(true);
+            st.insert(curr_coordinate);
         }
         return(false);
     }
